@@ -1,0 +1,18 @@
+
+
+
+Name: Correct md generated with "Writage"
+Description: Corrects md punctuaction in the selected text
+Binding: correct_writage_md_addin
+Interactive: false
+
+
+Name: Insert R code chunk for conspects
+Description: Insert chunk for conspects.
+Binding: insert_chunk_r_Addin
+Interactive: false
+
+Name: Insert python code chunk for conspects
+Description: Insert chunk for conspects.
+Binding: insert_chunk_python_Addin
+Interactive: false

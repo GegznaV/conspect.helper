@@ -1,0 +1,8 @@
+  Plant   Type  Treatment
+1   Qn1 Quebec nonchilled
+2   Qn1 Quebec nonchilled
+3   Qn1 Quebec nonchilled
+  conc uptake
+1   95   16.0
+2  175   30.4
+3  250   34.8
