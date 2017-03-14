@@ -1,7 +1,7 @@
-#' Read fragmented table from a flat file.
+#' Read fragmented table from a flat file (DOES NOT WORK).
 #'
-#'  A convenience function, that wraps \code{read_tabe}
-#'  from package \pkg{readr}.
+#'  A convenience function, that wraps \code{fread}
+#'  from package \pkg{data.table}.
 #'
 #' @inheritParams convert_to_lines
 #'
@@ -23,7 +23,7 @@
 #' # 3  250   34.8
 #'
 #'
-#' read_fragmented_table("data-raw/CO_head.txt")
+#' fread_fragmented("data-raw/CO_head.txt")
 #'
 #' ##   Plant   Type  Treatment conc uptake
 #' ## 1   Qn1 Quebec nonchilled   95   16.0
@@ -57,7 +57,7 @@
 #'
 #'
 #' @import magrittr
-read_fragmented_table <- function(x){
+fread_fragmented <- function(x, stringsAsFactors = TRUE, ...){
 
     LINES <- convert_to_lines(x)
 
@@ -68,13 +68,18 @@ read_fragmented_table <- function(x){
     # n_unique1 <- utils::read.table(file = x,
     #                                skip = n_total-1,
     #                                header = F)$V1 + 1
-    n_unique1 <- readr::read_table(file = x,
-                                   skip = n_total-1,
-                                   col_names = F)$X1 + 1
+
+    # n_unique1 <- readr::read_table(file = x,
+    #                                skip = n_total-1,
+    #                                col_names = F)$X1 + 1
+
+    n_unique1 <- data.table::fread(input = x,
+                                   data.table = FALSE,
+                                   skip = n_total - 1)$V1 + 1
 
     # METHOD 2: If first character is a space, the like is treated as header line
     # (result is correct if table's format is appropriate)
-    repetitions2 <- (substr(LINES, 1, 2) == "  ") %>% sum()
+    repetitions2 <- (substr(LINES, start = 1, stop = 2) == "  ") %>% sum()
 
 
     repetitions1 <- n_total / n_unique1     # method 1
@@ -102,15 +107,23 @@ read_fragmented_table <- function(x){
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     n_skip <- ((1:repetitions)-1)* n_unique
 
+
     read_parts <- function(n_skip_i) {
-        readr::read_table(x,
-                   col_names = TRUE,
-                   skip   = n_skip_i,
-                   n_max  = n_unique)  }
+        # readr::read_table(x,
+        #                   col_names = TRUE,
+        #                   skip   = n_skip_i,
+        #                   n_max  = n_unique)
+
+        data.table::fread(x,
+                          header = TRUE,
+                          skip   = n_skip_i,
+                          nrows  = n_unique,
+                          stringsAsFactors = stringsAsFactors,
+                          ...)
+    }
 
     data_list <- lapply(n_skip, read_parts)
 
     Reduce(merge.data.frame, data_list)  %>%
-        dplyr::select(-X1) %>%
-        type_convert()
+        dplyr::select(-X1)
 }

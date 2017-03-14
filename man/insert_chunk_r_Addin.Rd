@@ -11,6 +11,7 @@ Call this function as an addin to insert R's code chunk for
  conspects at the cursor position.
 }
 \seealso{
-Other 'Insert at cursor position' addins: \code{\link{insert_chunk_python_Addin}}
+Other 'Insert at cursor position' addins: \code{\link{insert_chunk_python_Addin}},
+  \code{\link{insert_lt_quotes_low_Addin}},
+  \code{\link{insert_lt_quotes_upp_Addin}}
 }
-

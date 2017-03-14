@@ -1,0 +1,115 @@
+# myControl
+$method
+[1] "cv"
+
+$number
+[1] 10
+
+$repeats
+[1] 1
+
+$search
+[1] "grid"
+
+$p
+[1] 0.75
+
+$initialWindow
+NULL
+
+$horizon
+[1] 1
+
+$fixedWindow
+[1] TRUE
+
+$verboseIter
+[1] TRUE
+
+$returnData
+[1] TRUE
+
+$returnResamp
+[1] "final"
+
+$savePredictions
+[1] FALSE
+
+$classProbs
+[1] TRUE
+
+$summaryFunction
+function (data, lev = NULL, model = NULL) 
+{
+    if (length(levels(data$obs)) > 2) 
+        stop(paste("Your outcome has", length(levels(data$obs)), 
+            "levels. The twoClassSummary() function isn't appropriate."))
+    requireNamespaceQuietStop("pROC")
+    if (!all(levels(data[, "pred"]) == levels(data[, "obs"]))) 
+        stop("levels of observed and predicted data do not match")
+    rocObject <- try(pROC::roc(data$obs, data[, lev[1]], direction = ">"), 
+        silent = TRUE)
+    rocAUC <- if (class(rocObject)[1] == "try-error") 
+        NA
+    else rocObject$auc
+    out <- c(rocAUC, sensitivity(data[, "pred"], data[, "obs"], 
+        lev[1]), specificity(data[, "pred"], data[, "obs"], lev[2]))
+    names(out) <- c("ROC", "Sens", "Spec")
+    out
+}
+<environment: namespace:caret>
+
+$selectionFunction
+[1] "best"
+
+$preProcOptions
+$preProcOptions$thresh
+[1] 0.95
+
+$preProcOptions$ICAcomp
+[1] 3
+
+$preProcOptions$k
+[1] 5
+
+
+$sampling
+NULL
+
+$index
+NULL
+
+$indexOut
+NULL
+
+$indexFinal
+NULL
+
+$timingSamps
+[1] 0
+
+$predictionBounds
+[1] FALSE FALSE
+
+$seeds
+[1] NA
+
+$adaptive
+$adaptive$min
+[1] 5
+
+$adaptive$alpha
+[1] 0.05
+
+$adaptive$method
+[1] "gls"
+
+$adaptive$complete
+[1] TRUE
+
+
+$trim
+[1] FALSE
+
+$allowParallel
+[1] TRUE

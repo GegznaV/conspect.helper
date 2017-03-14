@@ -6,6 +6,16 @@ Description: Corrects md punctuaction in the selected text
 Binding: correct_writage_md_addin
 Interactive: false
 
+Name: Correct md - block quotes to R code chunk
+Description: Correct md - convert lines with block quotes to R code chunk
+Binding: correct_block2rchunk_Addin
+Interactive: false
+
+Name: Correct md - rekasius2rmd_Addin
+Description: Correct md - rekasius2rmd_Addin
+Binding: rekasius2rmd_Addin
+Interactive: false
+
 
 Name: Insert R code chunk for conspects
 Description: Insert chunk for conspects.
@@ -15,4 +25,19 @@ Interactive: false
 Name: Insert python code chunk for conspects
 Description: Insert chunk for conspects.
 Binding: insert_chunk_python_Addin
+Interactive: false
+
+Name: Insert LT quotes (upper)
+Description: Insert LT quotes (upper)
+Binding: insert_lt_quotes_upp_Addin
+Interactive: false
+
+Name: Insert LT quotes (lower)
+Description: Insert LT quotes (lower)
+Binding: insert_lt_quotes_low_Addin
+Interactive: false
+
+Name: Enclose with R code chunk
+Description: Enclose text with R code chunk in knitr document
+Binding: enclose_with_r_chunk_Addin
 Interactive: false

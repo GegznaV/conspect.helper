@@ -10,6 +10,7 @@ insert_chunk_python_Addin()
 Call this function as an addin to insert python's code chunk for conspects at the cursor position.
 }
 \seealso{
-Other 'Insert at cursor position' addins: \code{\link{insert_chunk_r_Addin}}
+Other 'Insert at cursor position' addins: \code{\link{insert_chunk_r_Addin}},
+  \code{\link{insert_lt_quotes_low_Addin}},
+  \code{\link{insert_lt_quotes_upp_Addin}}
 }
-
