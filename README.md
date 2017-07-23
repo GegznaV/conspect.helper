@@ -8,7 +8,7 @@
 
 ------------------------------------------------------------------------
 
-<img src="https://raw.githubusercontent.com/GegznaV/conspect.helper/master/doc/logo.png" width="30%" height="30%" style="display: block; margin: auto;" />
+<img src="https://raw.githubusercontent.com/GegznaV/conspect.helper/master/docs/logo.png" width="30%" height="30%" style="display: block; margin: auto;" />
 
 Development version of package `conspect.helper`
 ================================================

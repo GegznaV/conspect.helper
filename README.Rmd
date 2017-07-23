@@ -24,7 +24,7 @@ knitr::opts_chunk$set(
   
 
 ```{r, fig.align='center', out.height='30%', out.width='30%',echo=FALSE}
-knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/conspect.helper/master/doc/logo.png")
+knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/conspect.helper/master/docs/logo.png")
 ```
 
 Development version of package `conspect.helper` 
