@@ -129,31 +129,7 @@ correct_writage_md_addin <- function(){
 }
 
 
-#' Insert Lithuanian quotes (lower)
-#'
-#' Call this function as an addin to insert lower Lithuanian quotes.
-#'
-#' @export
-#'
-#'
-#' @family 'Insert at cursor position' addins
-insert_lt_quotes_low_Addin <- function() {
-    TEXT ="„"
-    rstudioapi::insertText(text = TEXT)
-}
 
-#' Insert Lithuanian quotes (upper)
-#'
-#' Call this function as an addin to insert upper Lithuanian quotes.
-#'
-#' @export
-#'
-#'
-#' @family 'Insert at cursor position' addins
-insert_lt_quotes_upp_Addin <- function() {
-    TEXT ="“"
-    rstudioapi::insertText(text = TEXT)
-}
 
 
 #' Enclose with R code chunk
@@ -240,16 +216,17 @@ rekasius2rmd <- function(text_){
     # sub("( *)Dalykas: (.*)","Title: \\2", txt_head)
     #
     # make R code cunks
-    for (i in seq_along(status)){
-        if (status[i] == 1){
-            txt2[i] = paste0("\n```{r}\n", txt2[i])
+    for (i in seq_along(status)) {
+        if (status[i] == 1) {
+            # txt2[i] = paste0("\n```{r}\n", txt2[i])
+            txt2[i] = paste0("```{r}\n", txt2[i])
         } else if (status[i] == -1) {
             txt2[i] = paste0("```\n", txt2[i])
         }
     }
 
 
-    paste0(txt2, collapse="\n")
+    paste0(txt2, collapse = "\n")
     # writeLines(text_, txt2)
 }
 

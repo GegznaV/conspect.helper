@@ -1,0 +1,57 @@
+
+---
+output: github_document
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+ 
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = FALSE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+***
+
+[![CRAN version](http://www.r-pkg.org/badges/version/conspect.helper)](http://cran.rstudio.com/web/packages/conspect.helper/index.html)
+[![GitHub version](https://img.shields.io/badge/GitHub-v`r packageVersion("conspect.helper")`-brightgreen.svg)](https://github.com/GegznaV/conspect.helper)
+<!-- [![Travis-CI Build Status](https://travis-ci.org/GegznaV/conspect.helper.svg?branch=master)](https://travis-ci.org/GegznaV/conspect.helper) 
+[![codecov.io](https://codecov.io/github/GegznaV/conspect.helper/coverage.svg?branch=master)](https://codecov.io/github/GegznaV/conspect.helper?branch=master) -->
+[![Last-update](https://img.shields.io/badge/Updated%20on-`r gsub('-', '--', Sys.Date())`-yellowgreen.svg)](/commits/master)
+
+***
+  
+
+```{r, fig.align='center', out.height='30%', out.width='30%',echo=FALSE}
+knitr::include_graphics("https://raw.githubusercontent.com/GegznaV/conspect.helper/master/doc/logo.png")
+```
+
+Development version of package `conspect.helper` 
+====================================================
+  
+
+Tools for taking notes.
+
+* * *
+
+**The package is under construction.** Some functions may be changed significantly.
+
+
+* * *
+
+Install package:
+
+```{r Install package, eval=FALSE}
+library(devtools)
+install_github("GegznaV/conspect.helper")
+```
+
+
+* * *
+
+ <!-- <p align="right">  -->
+ <!-- File updated on <b>`r Sys.Date()`</b> with version of package  <b>`r packageVersion("conspect.helper")`</b> -->
+ <!-- </p>     -->
+
+

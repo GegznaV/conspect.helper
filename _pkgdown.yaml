@@ -1,0 +1,17 @@
+favicon: "favicon.png"
+
+template:
+  params:
+    bootswatch: spacelab
+
+navbar:
+  title: "Conspect Helper | R package"
+  type: default
+  left:
+  - icon: fa-home fa-lg
+    href: /index.html
+  - text: Functions
+    href: reference/index.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/GegznaV/conspect.helper

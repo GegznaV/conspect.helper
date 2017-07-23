@@ -1,11 +1,12 @@
 Package: conspect.helper
 Type: Package
-Title: Speed up process of taking notes and making conspects
+Title: Tools for Taking Notes
 Version: 0.0.2
-Author: Vilmantas Gegzna
+Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <GegznV@gmail.com>
-Description: Helper functions to speed up process of taking notes and making
-    conspects.
+Description: Speed up process of taking notes and making conspects.
+             Helper functions to speed up process of taking 
+             notes and making  conspects.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
