@@ -1,7 +1,7 @@
 Package: conspect.helper
 Type: Package
 Title: Tools for Taking Notes
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: person("Vilmantas", "Gegzna", email = "GegznaV@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <GegznV@gmail.com>
 Description: Speed up process of taking notes and making conspects.
@@ -10,7 +10,7 @@ Description: Speed up process of taking notes and making conspects.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.1
 Remotes:
     GegznaV/spMisc
 Depends:
