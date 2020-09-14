@@ -144,6 +144,10 @@ enclose_with_r_chunk_Addin <- function() {
     # spAddins:::enclose_selection_with("```{r}\n", "\n```")}
     addin.tools:::rs_enclose_selection_with("```{r}\n", "\n```")}
 
+# Name: Enclose with R code chunk
+# Description: Enclose text with R code chunk in knitr document
+# Binding: enclose_with_r_chunk_Addin
+# Interactive: false
 # =============================================================================
 
 block_quotes_to_r_chunk <- function(text_){
