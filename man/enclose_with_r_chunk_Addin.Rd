@@ -9,3 +9,4 @@ enclose_with_r_chunk_Addin()
 \description{
 Call this function as an addin to enclose text into R code chunk
 }
+\concept{'Enclose with' addins}

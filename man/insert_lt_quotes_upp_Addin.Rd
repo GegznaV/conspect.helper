@@ -10,7 +10,9 @@ insert_lt_quotes_upp_Addin()
 Call this function as an addin to insert upper Lithuanian quotes.
 }
 \seealso{
-Other 'Insert at cursor position' addins: \code{\link{insert_chunk_python_Addin}},
-  \code{\link{insert_chunk_r_Addin}},
-  \code{\link{insert_lt_quotes_low_Addin}}
+Other 'Insert at cursor position' addins: 
+\code{\link{insert_chunk_python_Addin}()},
+\code{\link{insert_chunk_r_Addin}()},
+\code{\link{insert_lt_quotes_low_Addin}()}
 }
+\concept{'Insert at cursor position' addins}

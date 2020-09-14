@@ -21,7 +21,7 @@ Converts text into separate lines
 }
 \examples{
 
-convert_to_lines("a\\nb")
+convert_to_lines("a\nb")
 
 # expect error, as "a" is interpreted as a file name:
 

@@ -10,6 +10,8 @@ correct_writage_md_addin()
 [!] Correnct md text genereted with Writage (add-in)
 }
 \seealso{
-Other 'Replace selected symbols' addins: \code{\link{correct_block2rchunk_Addin}},
-  \code{\link{rekasius2rmd_Addin}}
+Other 'Replace selected symbols' addins: 
+\code{\link{correct_block2rchunk_Addin}()},
+\code{\link{rekasius2rmd_Addin}()}
 }
+\concept{'Replace selected symbols' addins}

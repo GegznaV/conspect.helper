@@ -10,6 +10,8 @@ rekasius2rmd_Addin()
 [!] Correnct md text genereted with Writage (add-in): block quote to R chunk
 }
 \seealso{
-Other 'Replace selected symbols' addins: \code{\link{correct_block2rchunk_Addin}},
-  \code{\link{correct_writage_md_addin}}
+Other 'Replace selected symbols' addins: 
+\code{\link{correct_block2rchunk_Addin}()},
+\code{\link{correct_writage_md_addin}()}
 }
+\concept{'Replace selected symbols' addins}
