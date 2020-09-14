@@ -23,3 +23,14 @@ insert_lt_quotes_upp_Addin <- function() {
     TEXT = "“"
     rstudioapi::insertText(text = TEXT)
 }
+
+
+# Name: Insert LT quotes (upper)
+# Description: Insert LT quotes (upper)
+# Binding: insert_lt_quotes_upp_Addin
+# Interactive: false
+#
+# Name: Insert LT quotes (lower)
+# Description: Insert LT quotes (lower)
+# Binding: insert_lt_quotes_low_Addin
+# Interactive: false
