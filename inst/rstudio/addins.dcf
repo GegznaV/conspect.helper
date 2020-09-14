@@ -27,17 +27,4 @@ Description: Insert chunk for conspects.
 Binding: insert_chunk_python_Addin
 Interactive: false
 
-Name: Insert LT quotes (upper)
-Description: Insert LT quotes (upper)
-Binding: insert_lt_quotes_upp_Addin
-Interactive: false
 
-Name: Insert LT quotes (lower)
-Description: Insert LT quotes (lower)
-Binding: insert_lt_quotes_low_Addin
-Interactive: false
-
-Name: Enclose with R code chunk
-Description: Enclose text with R code chunk in knitr document
-Binding: enclose_with_r_chunk_Addin
-Interactive: false
